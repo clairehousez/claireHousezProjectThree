@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { useEffect, useState } from "react"
+import axios from "axios"
+
 
 function App() {
+  const [teams, setTeams] = useState([]);
+
+  useEffect(() => {
+    axios({
+      url: "https://statsapi.web.nhl.com/api/v1/teams",
+      method: "GET",
+      dataResponse: "json",
+      params: {
+        fomat: "json"
+      },
+    }).then((response) => {
+      console.log(response)
+      setTeams(response.data.teams)
+    })
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>NHL</h1>
+
+      {teams.map((team) => {
+        return(
+          <p>{team.name}</p>
+        )
+      })}
     </div>
-  );
+  )
 }
 
 export default App;
