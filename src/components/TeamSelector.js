@@ -1,20 +1,27 @@
+import { useState } from "react"
 
 const TeamSelector = (props) => {
-    const handleClick = () => {
-        console.log("click!")
+    
+    const [teamChoice, setTeamChoice] = useState("placeholder")
+
+    const getTeam = (e) => {
+        setTeamChoice(e.target.value)
     }
 
     return (
-        <div className="team-dropdown">
-            <select>
+        <form className="team-dropdown" onSubmit={(e) => props.displayTeam(e, teamChoice)}>
+            <select onChange={getTeam} value={teamChoice}>
                 { props.data.map((team) => {
                     return (
-                        <option onClick={handleClick}>{team.name}</option>
+                        <option value={team.name} key={team.id}>{team.name}</option>
+
                     )
                 })}
             </select>
 
-        </div>
+            <button type="Submit">Submit</button>
+
+        </form>
     )
 
 }

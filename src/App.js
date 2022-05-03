@@ -1,11 +1,14 @@
-import './App.css'
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import TeamSelector from './components/TeamSelector';
 import TeamInfo from './components/TeamInfo';
+import "./App.css"
+
 
 function App() {
   const [teams, setTeams] = useState([])
+
+  const [finalTeam, setFinalTeam] = useState({})
 
   useEffect(() => {
     axios({
@@ -21,13 +24,25 @@ function App() {
       })
   }, [])
 
+  const displayTeam = (e, teamName) => {
+    e.preventDefault()
+    console.log(teamName)
+
+    const singleTeam = teams.forEach(team => {
+      if (team.name === teamName) {setFinalTeam(team)}
+    })
+
+    console.log(singleTeam)
+
+  }
+
   return (
     <div className='App'>
       <h1>NHL</h1>
 
-      <TeamSelector data={teams} />
+      <TeamSelector key={teams} data={teams} displayTeam={displayTeam} />
 
-      <TeamInfo />
+      <TeamInfo finalTeam={finalTeam} />
 
 
     </div>
