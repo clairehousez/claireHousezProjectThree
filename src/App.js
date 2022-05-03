@@ -38,13 +38,18 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>NHL</h1>
+      <header>
+        <h1>NHL</h1>
+      </header>
+      <main>
+        <TeamSelector key={teams} data={teams} displayTeam={displayTeam} />
+      
 
-      <TeamSelector key={teams} data={teams} displayTeam={displayTeam} />
-
-      <TeamInfo finalTeam={finalTeam} />
-
-
+        <TeamInfo finalTeam={finalTeam} />
+      </main>
+      <footer>
+        <p>Created at Juno College of Technology</p>
+      </footer>
     </div>
   )
 }
