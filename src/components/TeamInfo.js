@@ -13,7 +13,7 @@ function TeamInfo(props) {
                 <p>Location: {props.finalTeam.locationName}</p>
                 <p>Conference: {props.finalTeam.conference.name}</p>
                 <p>First Year: {props.finalTeam.firstYearOfPlay}</p>
-                <p>Website: {props.finalTeam.officialSiteUrl}</p>
+                <p>Website: <a href="{props.finalTeam.officialSiteUrl}">{props.finalTeam.officialSiteUrl}</a></p>
             
             </div>
             }
