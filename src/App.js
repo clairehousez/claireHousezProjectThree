@@ -57,7 +57,8 @@ function App() {
       </main>
       
       <footer>
-        <p>Created at Juno College of Technology</p>
+        <p>Created by Claire Housez at Juno College of Technology</p>
+        <p>Data from <a href="https://github.com/dword4/nhlapi">NHL API</a></p>
       </footer>
     </div>
   )
