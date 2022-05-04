@@ -45,6 +45,7 @@ function App() {
       <header>
         {/* header */}
       </header>
+      
       <main>
       <h1>Slapshot</h1>
         <div className="wrapper">
@@ -54,6 +55,7 @@ function App() {
           <TeamInfo finalTeam={finalTeam} />
         </div>
       </main>
+      
       <footer>
         <p>Created at Juno College of Technology</p>
       </footer>
