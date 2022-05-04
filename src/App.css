@@ -75,6 +75,7 @@ select {
     border: none;
     border-bottom: 1px solid white;
     text-align: center;
+    cursor: pointer;
 }
 
 button {
@@ -122,3 +123,30 @@ a:focus {
     border-bottom: 1px solid white;
 }
 
+@media(max-width: 375px) {
+    .App {
+        height: 100vh;
+    }
+
+    h1 {
+        line-height: 1rem;
+    }
+    
+    .wrapper {
+        width: 98%;
+    }
+
+    header {
+        height: 50px;
+    }
+
+    main {
+        height: 95%;
+    }
+
+    footer {
+        line-height: normal;
+        font-size: 0.8rem;
+        display: block;
+    }
+}
