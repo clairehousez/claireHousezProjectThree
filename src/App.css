@@ -139,21 +139,30 @@ a:focus {
     }
 
     header {
-        height: 50px;
+        height: 5vh;
     }
 
     main {
-        height: 90%;
+        height: 90vh;
+    }
+
+    select {
+        width: 90%;
+    }
+
+    button {
+        margin-bottom: 20px;
+        cursor: pointer;
     }
 
     .teamInfo {
-        margin-bottom: 20px;
+        margin: 20px 10px 20px 10px;
+        padding: 20px 0 40px 0;
     }
 
     footer {
         line-height: normal;
         font-size: 0.8rem;
-        display: block;
-        height: 10px;
+        height: 5vh;
     }
 }
