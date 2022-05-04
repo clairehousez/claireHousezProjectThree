@@ -38,14 +38,21 @@ function App() {
 
   return (
     <div className='App'>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Lato&display=swap');
+      </style> 
+      
       <header>
-        <h1>NHL</h1>
+        {/* header */}
       </header>
       <main>
-        <TeamSelector key={teams} data={teams} displayTeam={displayTeam} />
+      <h1>Slapshot</h1>
+        <div className="wrapper">
+          <TeamSelector key={teams} data={teams} displayTeam={displayTeam} />
       
 
-        <TeamInfo finalTeam={finalTeam} />
+          <TeamInfo finalTeam={finalTeam} />
+        </div>
       </main>
       <footer>
         <p>Created at Juno College of Technology</p>

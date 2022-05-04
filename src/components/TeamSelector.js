@@ -9,7 +9,7 @@ const TeamSelector = (props) => {
     }
 
     return (
-        <form className="team-dropdown" onSubmit={(e) => props.displayTeam(e, teamChoice)}>
+        <form className="teamDropdown" onSubmit={(e) => props.displayTeam(e, teamChoice)}>
             <select onChange={getTeam} value={teamChoice}>
                 { props.data.map((team) => {
                     return (
