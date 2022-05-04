@@ -89,6 +89,8 @@ button {
     font-size: 1.4rem;
     line-height: 2rem;
     letter-spacing: 0.1rem;
+    background-color: white;
+    color: black;
 }
 
 button:hover,
